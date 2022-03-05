@@ -12,11 +12,9 @@ body {
 
 body {
   margin: 0;
-  /* width: 1378px; *если убрать эту величину, то картинка в заголовке почему-то замостится*/
-  background-color: #f7f4f4; /*для того, чтобы видеть, где body, а где containter*/
-  font-family: Roboto;
 
-  /* identical to box height, or 186% */
+  background-color: #f7f4f4;
+  font-family: Roboto;
 }
 
 .container {
@@ -28,9 +26,6 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  /* .container {
-    grid-auto-flow: column;
-  } */
   .main-img {
     max-width: 700px;
   }
@@ -57,7 +52,6 @@ header {
   display: flex;
 }
 
-/*почему переносится по словам?*/
 .nav-menu-item {
   margin-right: 20px;
   margin-left: 0;
@@ -75,6 +69,12 @@ a.nav-menu-link {
   text-transform: uppercase;
 }
 
+a.nav-menu-link:hover {
+  color: #bd5e5e;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
 a.nav-menu-link:visited {
   color: #ac6161;
   text-decoration: none;
@@ -86,13 +86,17 @@ a.nav-menu-link:visited {
   display: flex;
   font-size: 13px;
   margin-right: 30px;
-  /*margin-left: 220px;*/
+
   font-style: normal;
   font-weight: normal;
   line-height: 26px;
-  /* identical to box height, or 200% */
+
   letter-spacing: 1.3px;
   text-transform: uppercase;
+}
+
+.nav-menu-login {
+  margin-left: 125px;
 }
 
 .nav-menu-registration {
@@ -109,6 +113,20 @@ a#get-started-button {
   color: #e38c00;
 }
 
+#get-started-button:hover {
+  border: 1px solid #e38c00;
+  background-color: #e38c00;
+  color: white;
+  border-radius: 15px;
+  padding: 2px;
+}
+
+a.nav-menu-started:hover {
+  font-size: 16px;
+  padding: 3px;
+  font-weight: bolder;
+}
+
 .sticked-right-button {
   width: 150px;
   height: 35px;
@@ -120,6 +138,7 @@ a#get-started-button {
   top: 300px;
   right: 0;
   bottom: 0;
+  margin-right: -25px;
   font-size: 14px;
   letter-spacing: 1.4px;
   border-color: transparent;
@@ -129,12 +148,12 @@ a#get-started-button {
 
 div.current-offer {
   display: grid;
-  grid-template-columns: 2fr 1fr 20px;
+  grid-template-columns: 2fr 1fr 28px;
   /*width: 100%; 1380px;*/
-  height: 20px;
+  height: 45px;
   background-color: #eecfc5;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -146,12 +165,20 @@ div.current-offer {
   text-transform: uppercase;
 }
 
+div.current-offer > p {
+  margin-left: 69px;
+  height: 50%;
+  margin-top: 15px;
+}
+
 .close-button {
   display: flex;
   width: 18px;
   height: 18px;
   padding: 2px;
   opacity: 35%;
+  margin-top: 15px;
+  margin-right: 10px;
 }
 
 .close-button:hover {
@@ -169,15 +196,10 @@ div.current-offer {
   position: absolute;
 }
 
-.main-page {
-  /*width: 1378px;*/
-}
-
 .main-img {
   /*width: 50%;*/
   height: 800px;
-  background-image: url(/img/main_image.png); /*background-image занимает всё fill, игнорируя мёрджины, паддинги и т.д. оно просто занимает всю поверхность сзади! */
-  /*если изменить только ширину картинки, высота изменится автоматически*/
+  background-image: url(/img/main_image.png);
   background-size: 1378px 800px;
   margin: 0;
   overflow: hidden;
@@ -197,7 +219,7 @@ div.current-offer {
 }
 
 .main-page-text {
-  /*width: 614px;*/
+  width: 614px;
   margin-left: 69px;
   color: #01152f;
   font-family: Roboto;
@@ -222,6 +244,7 @@ div.current-offer {
   height: 47px;
   border-radius: 30px;
   margin-left: 69px;
+  margin-top: 43px;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1.4px;
@@ -242,31 +265,25 @@ div.current-offer {
   height: 60px;
   text-align: center;
   text-transform: capitalize;
-  white-space: pre-wrap; /*вот здесь сделала, чтобы не переносилось по словам. Но так не влезает строка при изменении масштаба....*/
-  /*margin-top: -20px; /*не уверена, правильное ли это решение по поднятию блока*/
+  white-space: pre-wrap;
   background-color: #01152f;
 }
 
 .about-eco-ul {
   display: flex;
   list-style-type: none;
-  /*margin-left: 77px;
-  margin-right: 77px;*/
+  flex-grow: 1;
   color: #fcf9f2;
   font-size: 16px;
   letter-spacing: 1px;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
-.about-eco-li {
-  /*width: 166px;*/
-  margin-right: 77px;
-  margin-left: 77px;
-}
-
-/*остановилась на размышлении о том, как применяется space-around и какая должна быть ширина*/
 
 .about-us {
   display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   height: auto;
   width: 100%;
   background-color: #fcf9f2;
@@ -274,7 +291,7 @@ div.current-offer {
 }
 
 .skin-img {
-  width: 336px;
+  width: 500px;
 }
 
 .about-us-text-title-big {
@@ -283,19 +300,20 @@ div.current-offer {
 }
 
 .about-us-text {
-  margin-right: 164px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* flex-shrink: 1; */
+  margin-top: 30px;
+  margin-right: 80px;
   padding-left: 40px;
   text-align: start;
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 19px;
   line-height: 30px;
   color: #01152f;
-}
-
-.about-us-text-title {
-  /*width: 319px;*/
 }
 
 .about-us-text-title-big {
@@ -314,7 +332,7 @@ div.current-offer {
   padding-left: 100px;
   padding-top: 13px;
   background-color: transparent;
-  margin-bottom: 130px;
+  margin-bottom: 10px;
 }
 
 .one-sentence {
@@ -340,13 +358,10 @@ div.current-offer {
 }
 
 .custom-routines-product {
-  border: 2px solid black; /*это чтобы я видела границу сейчас*/
+  border: 2px solid black;
   /* width: 350px;*/
   height: 680px;
-  /*margin-left: 55px;
-  margin-right: 55px; если это убираю, дивы забираются наверх*/
-  /*margin-top: 152px;
-  margin-bottom: 152px;*/
+
   padding: 10%;
 }
 
@@ -363,10 +378,15 @@ div.current-offer {
   max-width: fit-content;
 }
 
-@media screen and (max-width: 700px) {
-  .about-us {
+@media screen and (max-width: 950px) {
+  /* .about-us {
     width: min-content;
+  } */
+
+  .skin-img {
+    width: 100%;
   }
+
   .about-us-text {
     margin-right: 0;
   }
@@ -384,12 +404,12 @@ div.current-offer {
     grid-template-columns: repeat(auto-fill, 275px);
   }
 
-  .custom-routines {
+  /* .custom-routines {
     grid-template-columns: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding: 0;
-  }
+  } */
 
   .img-of-product {
     width: 50px;
@@ -409,10 +429,9 @@ div.current-offer {
 }
 
 .skincare-cards {
-  /* этот блок занимает всю ширину сайта */
   display: grid;
   border: 1px solid black;
-  /* width: 275px; возможно, вот это стоит убрать, чтобы блоки занимали место согласно auto-fill/auto-fit, получая автоматическую ширину) */
+
   height: 219px;
   justify-content: center;
 }
@@ -420,10 +439,8 @@ div.current-offer {
 .skincare-cards-icon {
   width: 111px;
   height: 111px;
-  margin-left: auto; /*центрирован благодаря этим мёрджинам!!!*/
+  margin-left: auto;
   margin-right: auto;
-  /*object-fit: cover;
-  object-position: center; /*14.09 закончила здесь */
 }
 
 .skincare-cards-icon img {
@@ -446,7 +463,7 @@ footer {
   width: 100%;
   height: 490px;
   display: grid;
-  grid-template-columns: 50% 1fr 1fr; /*почему-то не видит ещё один див?*/
+  grid-template-columns: 50% 1fr 1fr;
 }
 
 .description-for-email {
@@ -457,7 +474,6 @@ footer {
 }
 
 .footer-info-1lvl > h4 {
-  /*не забывай про то, что можно просто присваивать стили дочерним элементам, а не городить кучу классов!*/
   margin-left: 40px;
   text-transform: uppercase;
   margin-top: 50px;
@@ -501,10 +517,8 @@ footer {
 }
 
 [placeholder] {
-  /*селектор атрибута! но сейчас, почему-то, двигается вся плашка ввода*/
   color: white;
   margin-left: 25px;
-  /* text-transform: uppercase; -- вот это св-во сейчас работает на вводимый текст, а нужно на отображаемый*/
 }
 
 .footer-info-menu {
