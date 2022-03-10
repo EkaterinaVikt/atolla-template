@@ -353,24 +353,29 @@ div.current-offer > p {
   display: grid;
   grid-auto-flow: row;
   height: 680px;
-  padding: 5%;
+  padding-left: 10%;
+  margin: auto;
 }
 
 .img-of-product {
   width: 350px;
   height: 439px;
-  margin: auto;
+  /* margin-left: 10%; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .img-of-product-png {
   width: inherit;
 }
 
-.img-of-product-png:hover,
-.description-of-product:hover {
+.img-of-product-png:hover {
   width: 360px;
-  font-size: calc(100% + 1px);
-  font-weight: bold;
+}
+
+.description-of-product:hover {
+  background-color: #e38c0041;
+  padding: 2%;
 }
 
 .description-of-product {
@@ -379,7 +384,7 @@ div.current-offer > p {
   grid-auto-flow: row;
   row-gap: 1em;
   margin-top: 30px;
-  margin-left: auto;
+  margin-bottom: 30px;
 }
 
 .skincare-cards-wth-icons {
