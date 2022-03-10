@@ -12,7 +12,6 @@ body {
 
 body {
   margin: 0;
-
   background-color: #f7f4f4;
   font-family: Roboto;
 }
@@ -39,7 +38,6 @@ header {
   display: flex;
   align-items: center;
   background-color: #fcf9f2;
-  /*width: 1440px;*/
   max-width: 100%;
   height: 60px;
 }
@@ -132,7 +130,6 @@ a.nav-menu-started:hover {
   height: 35px;
   background-color: #e38c00;
   text-transform: uppercase;
-  /* margin-top: 100px; */
   position: fixed;
   left: auto;
   top: 300px;
@@ -149,17 +146,16 @@ a.nav-menu-started:hover {
 div.current-offer {
   display: grid;
   grid-template-columns: 2fr 1fr 28px;
-  /*width: 100%; 1380px;*/
+
   height: 45px;
   background-color: #eecfc5;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height, or 130% */
+
   text-align: left;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -197,7 +193,6 @@ div.current-offer > p {
 }
 
 .main-img {
-  /*width: 50%;*/
   height: 800px;
   background-image: url(/img/main_image.png);
   background-size: 1378px 800px;
@@ -261,7 +256,7 @@ div.current-offer > p {
   display: flex;
   flex-grow: 0;
   justify-content: space-around;
-  /*width: 100%; *1378px;*/
+
   height: 60px;
   text-align: center;
   text-transform: capitalize;
@@ -287,7 +282,6 @@ div.current-offer > p {
   height: auto;
   width: 100%;
   background-color: #fcf9f2;
-  /* overflow: hidden; */
 }
 
 .skin-img {
@@ -296,14 +290,13 @@ div.current-offer > p {
 
 .about-us-text-title-big {
   font-size: 40px;
-  /*line-height: 60px;*/
 }
 
 .about-us-text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* flex-shrink: 1; */
+
   margin-top: 30px;
   margin-right: 80px;
   padding-left: 40px;
@@ -339,7 +332,7 @@ div.current-offer > p {
   height: 318px;
   width: 100%;
   background: transparent;
-  padding: 69px 233px;
+  padding: 60px 200px;
   text-align: center;
 }
 
@@ -352,37 +345,50 @@ div.current-offer > p {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 110px;
-  grid-row-gap: 50px;
-  padding: 10%;
+  grid-column-gap: 45px;
+  grid-row-gap: 18px;
 }
 
 .custom-routines-product {
-  border: 2px solid black;
-  /* width: 350px;*/
+  display: grid;
+  grid-auto-flow: row;
   height: 680px;
-
-  padding: 10%;
+  padding: 5%;
 }
 
 .img-of-product {
   width: 350px;
   height: 439px;
-  border: dotted 1px #999;
+  margin: auto;
+}
+
+.img-of-product-png {
+  width: inherit;
+}
+
+.img-of-product-png:hover,
+.description-of-product:hover {
+  width: 360px;
+  font-size: calc(100% + 1px);
+  font-weight: bold;
+}
+
+.description-of-product {
+  width: 80%;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 1em;
+  margin-top: 30px;
+  margin-left: auto;
 }
 
 .skincare-cards-wth-icons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 2fr);
-  max-width: fit-content;
 }
 
 @media screen and (max-width: 950px) {
-  /* .about-us {
-    width: min-content;
-  } */
-
   .skin-img {
     width: 100%;
   }
@@ -397,22 +403,7 @@ div.current-offer > p {
   }
 
   .sticked-right-button {
-    display: none; /*скрыла показ кнопки*/
-  }
-
-  .skincare-cards-wth-icons {
-    grid-template-columns: repeat(auto-fill, 275px);
-  }
-
-  /* .custom-routines {
-    grid-template-columns: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 0;
-  } */
-
-  .img-of-product {
-    width: 50px;
+    display: none;
   }
 
   .custom-routines-product {
@@ -473,23 +464,36 @@ footer {
   margin-left: 40px;
 }
 
-.footer-info-1lvl > h4 {
-  margin-left: 40px;
+.footer-info-1lvl > div {
+  margin-left: 20px;
   text-transform: uppercase;
   margin-top: 50px;
   letter-spacing: 1px;
+  margin-left: 40px;
+}
+
+.footer-info-1lvl > div > h4 {
+  margin-left: 40px;
+}
+
+.footer-info-1lvl > div > p {
+  text-transform: none;
+}
+
+.footer-info-1lvl > ul {
+  margin-left: 40px;
 }
 
 .footer-info-1lvl,
 .footer-info-inner-contacts {
   background-color: #01152f;
-  border: #fcf9f2 1px solid;
+  border: #fcf9f2 0.5px solid;
   height: 420px;
   color: #fcf9f2;
 }
 
-.info-inner-contacts {
-  border: #fcf9f2 1px solid;
+.info-inner-contacts:nth-child(2) {
+  border-top: 1px solid #fcf9f2;
 }
 
 .join-button {
@@ -513,12 +517,12 @@ footer {
   color: #fcf9f2;
   border-radius: 25px 0px 0px 25px;
   height: 47px;
-  width: 400px;
+  width: 340px;
+  padding-left: 20px;
 }
 
 [placeholder] {
   color: white;
-  margin-left: 25px;
 }
 
 .footer-info-menu {
@@ -537,8 +541,31 @@ ul.footer-info-menu:first-child {
   text-transform: uppercase;
 }
 
+.footer-info-menu-item > a {
+  color: white;
+  text-decoration: none;
+}
+.footer-info-lower > ul > li > a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-info-lower > ul > li > a:hover {
+  font-size: 14.2px;
+  color: #e38c00;
+}
+
+.footer-info-menu-item > a:hover {
+  font-size: 15px;
+  color: #e38c00;
+}
+
 .footer-info-inner-contacts {
   display: grid;
+}
+
+.footer-info-inner-contacts > .footer-info-lower > ul > li:hover {
+  color: #e38c00;
 }
 
 .info-inner-contacts {
@@ -581,6 +608,16 @@ ul.footer-info-menu:first-child {
   margin-top: 40px;
 }
 
+.contacts-info-adress > a[href^="mailto"] {
+  color: #fcf9f2;
+  text-decoration: none;
+}
+
+.contacts-info-adress > a[href^="mailto"]:hover {
+  font-size: calc(100% + 1px);
+  color: #e38c00;
+}
+
 .footer-info-lower {
   background: transparent;
   text-transform: uppercase;
@@ -588,6 +625,7 @@ ul.footer-info-menu:first-child {
   letter-spacing: 1.4px;
   color: #01152f;
   margin-top: 25px;
+  margin-left: 10px;
 }
 
 .footer-info-lower > ul {
